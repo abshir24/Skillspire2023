@@ -1,0 +1,22 @@
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+    border:dotted blue 2px;
+}
+
+
+a,strong{
+    display:block;
+}
+
+
+#parent{
+    /* width:50%;
+    height:50%; */
+    border:dotted blue 2px;
+}
+.redbox{
+    width: 48.4%;
+    border:solid red 10px;
+    display: inline-block;
+}
