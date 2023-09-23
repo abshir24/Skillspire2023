@@ -19,4 +19,6 @@ a,strong{
     width: 48.4%;
     border:solid red 10px;
     display: inline-block;
+    position: relative;
+    top: 40px;
 }
