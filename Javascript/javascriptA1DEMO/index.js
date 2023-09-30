@@ -1,0 +1,1 @@
+console.log("This index.js file is linked properly to my HTML")
