@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            label,input{
+                display:block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="info-form">
+            <label>First Name</label>
+            <input type="text" id="first-name">
+
+            <label>Lastname Name</label>
+            <input type="text" id="last-name">
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+            <label>Age</label>
+            <input type="text" id="age">
+
+            <input type="submit" value="submit">
+        </form>
+    </body>
+
+    <script>
+        let infoForm = document.getElementById('info-form');
+        
+        infoForm.addEventListener("submit", function(e){
+            e.preventDefault();
+            
+            let firstName = document.getElementById('first-name')
+            let lastName =  document.getElementById('last-name')
+            let email = document.getElementById('email')
+            let age = document.getElementById('age')
+
+            document.write(`<h1> First Name: ${firstName.value}</h1>`)
+            document.write(`<h1>Last Name: ${lastName.value}</h1>`)
+            document.write(`<h1>Email: ${email.value}</h1>`)
+            document.write(`<h1>Age: ${age.value}</h1>`)
+
+            return false
+        })
+    </script>
+</html>
