@@ -40,6 +40,33 @@
             var arr = [1,2,"test","test"]
 
             console.log(arr.length)
+
+            //Given an array of numbers create a function that returns the max and min values in that array
+            //[1,2,3,4,5] return 5
+            function findMinMaxValue(array) {
+
+                let smallestNumber = array[0];
+                let biggestNumber = array[0];
+
+                for (let i = 1; i < array.length; i++) 
+                {
+                    if (array[i] < smallestNumber) 
+                    {
+                        smallestNumber = array[i];
+                    }
+
+                    if (array[i] > biggestNumber) 
+                    {
+                        biggestNumber = array[i];
+                    }
+                }
+
+                return {
+                    "Max": biggestNumber, 
+                    "Min": smallestNumber
+                }
+            }
+
         </script>
     </head>
 </html>
