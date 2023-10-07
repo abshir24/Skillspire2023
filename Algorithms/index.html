@@ -17,7 +17,7 @@
 
             }
 
-            console.log(arr([1, 2]))
+            // console.log(arr([1, 2]))
 
             // Create a function that accepts an array as a parameter and returns 
             // the average value of all the numbers in that array. To find the average 
@@ -37,36 +37,85 @@
 
             // console.log ( findAverage([1,2,3,4,5]) )
 
-            var arr = [1,2,"test","test"]
+            // var arr = [1,2,"test","test"]
 
-            console.log(arr.length)
+            // console.log(arr.length)
 
             //Given an array of numbers create a function that returns the max and min values in that array
             //[1,2,3,4,5] return 5
-            function findMinMaxValue(array) {
+            // function findMinMaxValue(array) {
 
-                let smallestNumber = array[0];
-                let biggestNumber = array[0];
+            //     let smallestNumber = array[0];
+            //     let biggestNumber = array[0];
 
-                for (let i = 1; i < array.length; i++) 
-                {
-                    if (array[i] < smallestNumber) 
-                    {
-                        smallestNumber = array[i];
-                    }
+            //     for (let i = 1; i < array.length; i++) 
+            //     {
+            //         if (array[i] < smallestNumber) 
+            //         {
+            //             smallestNumber = array[i];
+            //         }
 
-                    if (array[i] > biggestNumber) 
-                    {
-                        biggestNumber = array[i];
-                    }
-                }
+            //         if (array[i] > biggestNumber) 
+            //         {
+            //             biggestNumber = array[i];
+            //         }
+            //     }
 
-                return {
-                    "Max": biggestNumber, 
-                    "Min": smallestNumber
-                }
+            //     return {
+            //         "Max": biggestNumber, 
+            //         "Min": smallestNumber
+            //     }
+            // }
+
+            // 1. Create a function called greater than y pass two parameters
+            // 2. Create variable to keep track of number of values that are greater than y
+            // 3. Create for loop that iterates through the array
+            // 4. check to see if the value at that element is greater than y
+            // 5. if it is add one to your counter
+            // 6. return counter
+
+
+            function greaterThanY(arr,y){
+                var count = 0
+
+                for(let i = 0;i<arr.length;i++){
+                    if(arr[i] > y){
+                        count++
+                    } 
+                }    
+
+                return count
             }
 
+            // console.log( greaterThanY([1,2,3,4,5], 2) ) // this should return 2 because there are 2 values in 
+            //the array that are greater than 3
+
+            //Create a function that accepts a string of 1’s and 0’s and 
+            //returns a count of all of the 1’s 
+            //in that string. Example: Given “1001011” return 4. 
+            //Hint: Remember that strings are just an 
+            //array of characters that can’t be altered.
+
+            //1. Create a function that accepts a string of 1's and 0's
+            //2. Create a variable to keep track of the number of 1's
+            //3. Create a for loop that iterates through the string
+            //4. Check to see if the value at that element is a 1
+            //5. If it is add one to your counter
+            //6. Return counter
+
+            function countOnes(string){
+                var count = 0 
+
+                for(let i = 0;i<string.length;i++){
+                    if(string[i] == "1"){
+                        count++
+                    }
+                }
+
+                return count
+            }
+
+            console.log(countOnes("1001011")) // should return 4
         </script>
     </head>
 </html>

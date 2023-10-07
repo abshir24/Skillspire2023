@@ -48,5 +48,74 @@ my_string3 = my_string + my_string2
 firstname = "Tom"
 lastname = "Hanks"
 
-print("Hello my name is {}{}".format(firstname,lastname))
-print(f"Hello my name is {firstname}{lastname}")
+# print("Hello my name is {}{}".format(firstname,lastname))
+# print(f"Hello my name is {firstname}{lastname}")
+
+
+# Conditionals
+
+# age = int ( input("How old are you?") )
+
+# if age >= 18: 
+#     print("You are old enough to have a driver's liscence in the US")
+# else:
+#     print("You are not old enough to have a driver's liscence in the US")
+
+
+# Loops
+
+# for a in [1,2,3,4,5]:
+#     print(a)
+
+# array = [1,2,3,4,5]
+
+# for a in array:
+#     array[a] = 2
+
+# print(array)
+
+# for i in range(0,101,2):
+#     print(i)
+
+# a = int( input("Enter a number: ") )
+
+# while a > 0:
+#     print(a)
+#     a -=10
+
+# print("DONE")
+# a = int( input("Enter a number: ") )
+# while a != 0:
+#     a = int( input("Enter a number: ") )
+
+
+
+# Collections
+
+string = "string"
+# print(string[0:4])
+
+# listOfFruits = [100,200,300,4,5,6,7,8] # Creating a list of strings
+
+# print(listOfFruits[2:6])
+
+
+# for loops with lists
+
+array = [1,2,3,4,5,6,7,8,9,10]
+
+# for value in array:
+#     print(value)
+
+
+
+# for i in range(0,len(array)):
+#     array[i]  = array[i] * 2
+
+# print(array)
+
+
+array = [1,2,3,4,5,6,7,8,9,10]
+
+print(array[5:10])
+print(array[3:10])
