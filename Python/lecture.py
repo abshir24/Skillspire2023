@@ -115,7 +115,86 @@ array = [1,2,3,4,5,6,7,8,9,10]
 # print(array)
 
 
-array = [1,2,3,4,5,6,7,8,9,10]
+# array = [1,2,3,4,5,6,7,8,9,10]
 
-print(array[5:10])
-print(array[3:10])
+# print(array[5:10])
+# print(array[3:10])
+
+# input ( or parameter) = number
+
+# output (or return statement) = number * 2
+
+# def test(number):
+#     return number * 2
+
+# outcome_function = test(2)
+
+# print(outcome_function)
+
+#  len(), range(), input(),sort(),reverse, round()
+
+collection = [1,2,3,4,5]
+
+length = len(collection)
+
+# print(length)
+
+# for i in range(0,10,2):
+#     print(i)
+
+# test = int( input('Enter a number:') )
+
+# print(test)
+
+# collection = [2,1,2,0,5,4]
+
+# collection[0]
+
+# collection.sort()
+
+# collection[0] 
+
+# print(collection)
+
+# collection = [1,2,3,4,5]
+
+# collection.reverse()
+
+# print(collection)
+
+# number = 5.6
+
+# print(round(number))
+
+
+class Car:
+   def __init__(self, weight, color, make, model, year, top_speed):
+       self.weight = weight
+       self.color = color
+       self.make = make
+       self.model = model
+       self.year = year
+       self.top_speed = top_speed 
+
+
+car1 = Car(4000,"green","Ford","Mustang",2019,210)
+
+print("Color " + car1.color)
+
+print("Make " + car1.make)
+
+car2 = Car(12000, "Grey", "MAC", "Freightline", 2019, 160)
+
+print("Color " + car2.color)
+print("Make " + car2.make)
+
+# car3 = Car()
+
+
+ 
+
+# In the example above we create a class using the class keyword. Inside the body of the class we 
+# declare the a variable and set it equal to 5. Notice the indentation.  After we exit the class block we 
+# use a print statement to print the data that was stored in the x variable. This may not look like much due to the 
+# fact that we are just using a class to store a variable. But classes can do so much more. 
+# We're just laying down the ground work.
