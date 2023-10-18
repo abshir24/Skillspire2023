@@ -13,7 +13,7 @@ function arr (parameter){
   
   }
   
-  console.log(arr([1, 2]))
+  // console.log(arr([1, 2]))
 
 // Create a function that accepts an array as a parameter and returns 
 // the average value of all the numbers in that array. To find the average 
@@ -31,5 +31,22 @@ function findAverage(array){
     return average
 }
 
-findAverage([1,2,3,4,5])
+// findAverage([1,2,3,4,5])
+
+function stringCap(arr){
+
+  let string = ""
+
+  for(i = 0; i < arr.length; i++){
+      console.log("Before Adding Charachter: " + arr[i])
+      string += arr[i].toUpperCase()
+      console.log("After Adding Charachter: " + arr[i])
+  }
+  return string
+}
+
+capword = "hey"
+
+console.log(stringCap(capword))
+
 

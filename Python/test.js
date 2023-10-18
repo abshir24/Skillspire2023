@@ -1,5 +1,1 @@
-function test(){
-    console.log("Hello World!")
-}
-
-test()
+Math.round(1.6)
