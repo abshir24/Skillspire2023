@@ -198,3 +198,7 @@ print("Make " + car2.make)
 # use a print statement to print the data that was stored in the x variable. This may not look like much due to the 
 # fact that we are just using a class to store a variable. But classes can do so much more. 
 # We're just laying down the ground work.
+
+
+array = ["a",10,[1,2],True]
+

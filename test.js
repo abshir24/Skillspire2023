@@ -1,10 +1,17 @@
-for(let i = 0;i<=100;i+=2){
-    console.log(i)
+// Given an array with only 2 values. 
+// create a function that swaps the places of those 2 values and 
+// return the altered array. Given [1,2] return [2,1]
+
+//  Array swap pairs. Swap positions of successive pairs of values of given array. 
+//  If length is odd, do not change the final element. For [1,2,3,4], 
+//  return [2,1,4,3]. For example, change input ["Brendan",true,42] to [true,"Brendan",42]. 
+//  As with all array challenges, do this without using any built-in array methods.
+
+function swap(arr){
+    var temp = arr[0] 
+    arr[0] = arr[1]
+    arr[1] = temp
 }
 
-// var string = "string"
 
-// console.log(string[string.length-1])
-array = [1,2,3,4,5,6,7,8,9,10]
-
-console.log(array.length)
+var arr = [1,2,3,4] // [2,1,4,3]

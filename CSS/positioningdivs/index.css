@@ -1,0 +1,30 @@
+.parent-div{
+    width:80%;
+    border: 2px solid black;
+}
+
+.child-div{
+    padding-top:15px;
+    padding-bottom: 5px;   
+    border: 2px solid black;
+    height: 8%;
+}
+
+.block{
+    width:35px;
+    height: 35px
+}
+
+#blue{
+    background-color: blue;
+    margin-left:50%
+}
+
+#green{
+    background-color: green;
+    margin-left:90%;
+}
+
+#red{
+    background-color: red;
+}

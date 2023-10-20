@@ -25,7 +25,7 @@ class Boxer:
         print("Strength:", self.strength)
         print("Wins:", self.wins)
         print("Losses:", self.losses)
-    
+        
     def getTotalStats(self):
         return self.size + self.strength + self.wins + self.losses
 
