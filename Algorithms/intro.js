@@ -45,8 +45,29 @@ function stringCap(arr){
   return string
 }
 
-capword = "hey"
+// capword = "hey"
 
-console.log(stringCap(capword))
+// console.log(stringCap(capword))
 
+function pushFront(arr,val){
+  arr.push(val)
+
+  for(let i = arr.length - 1; i>0; i--){
+    let temp = arr[i] 
+    arr[i] = arr.length[0]
+    arr[i-1] = temp
+    
+    [1,3,4,5,2]
+  }
+
+
+  return arr
+}
+
+
+// console.log(pushFront(test, 1))
+
+// test.pop()
+
+// console.log(test)
 
