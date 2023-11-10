@@ -16,3 +16,16 @@ function addFives(numbers){
     return numbers
 }
 
+
+var removeAt = function(arr, index){
+    var temp = arr[index];
+    
+    for(var i = index; i < arr.length-1; i++){
+        arr[i] = arr[i+1];
+    }
+    arr.pop()
+
+    return temp
+}
+
+console.log(removeAt([1,2,3,4,5,6,7,8,9,10], 5));
