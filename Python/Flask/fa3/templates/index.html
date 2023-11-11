@@ -3,7 +3,7 @@
        <title>User Data</title>
     </head>
 
-    <form action="/process-data" method="POST">
+    <form action="/" method="POST">
         <label>User Name:</label><br>
         <input type="text" name="username"><br> 
 
@@ -15,5 +15,11 @@
 
         <input type="submit" value="Submit!">
     </form>
+
+    
+    <h1>Username: {{session.username}}</h1>
+    <h1>Email: {{session.email}}</h1>
+    <h1>Favorite Food: {{ session.favorite_food }}</h1>
+
 
 </html>
