@@ -1,0 +1,36 @@
+<H1>FIRST FORM</H1>
+
+<form action="/" method="POST">
+    <label>User Name:</label><br>
+    <input type="text" name="username"><br> 
+
+    <label>Email:</label><br>
+    <input type="email" name="email"><br>
+
+    <label>Favorite Food:</label><br>
+    <input type="text" name="favorite_food"><br>
+
+    <input type="submit" value="Submit!">
+</form>
+
+<H1>SECOND FORM</H1>
+<form action="/" method="POST">
+    {{ form.username.label }} <br>
+    {{ form.username }} <br>
+
+    {{ form.email.label }} <br>
+    {{ form.email }} <br>
+
+    {{ form.favorite_food.label }} <br>
+    {{ form.favorite_food }} <br>
+
+    {{ form.csrf_token }}
+
+    {{ form.submit }}
+</form>
+
+{% if user_data %}
+    <h1>{{ user_data.username }}</h1>
+    <h1>{{ user_data.email }}</h1>
+    <h1>{{ user_data.favorite_food }}</h1>
+{% endif %}
