@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -17,18 +17,47 @@ def index():
 
 @app.route('/userdata', methods=["GET","POST"])
 def userData(): 
-    new_user = User(email = request.form["email"], password = request.form["password"])    
-    db.session.add(new_user)
-    db.session.commit()
+    if request.method == "POST":
+        new_user = User(email = request.form["email"], password = request.form["password"])    
+        db.session.add(new_user)
+        db.session.commit()
 
     # Retrieval
     users = User.query.all() #[<User1>,<User2>,<User3>]
 
-    print("***********************************")
-    print("Users", users)
-    print("***********************************")
     return render_template("users.html", users = users)
 
+@app.route('/login', methods=["GET","POST"])
+def login():
+    user = User.query.filter_by(email=request.form['email']).first()
+    if user == None or user.password != request.form['password']: 
+        return render_template("index.html")
+    else:
+        return render_template("user.html",email=user.email)
+    
+
+@app.route('/updateuser/<email>')
+def update(email):
+    user = User.query.get(email)
+
+    user.email = "email@email.com"
+    user.password = "12345"
+
+    db.session.commit()
+
+    return render_template("user.html",email=user.email)
+
+@app.route('/deleteuser/<email>')
+def delete(email):
+    user = User.query.get(email)
+
+    db.session.delete(user)
+
+    db.session.commit()
+
+    return redirect('/userdata')
+
+    
 
 
 if __name__ == "__main__":

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Courses</title>
+        <style>
+            table,td{
+               border: solid black 2px 
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <h2>Add a new course:</h2>
+        <form action="/addcourse" method="POST">
+            <label>Name:</label><br>
+            <input type="text" name="coursename"><br>
+            
+            <label>Description:</label><br>
+            <input type="text" name="description"><br>
+
+            <input type="submit" value="Add">
+        </form>
+    </body>
+
+    <h2>Courses:</h2>
+
+    <table>
+        <thead>
+            <td>Course Name</td>
+            <td>Description</td>
+            <td>Date Added</td>
+            <td>Action</td>
+        </thead>
+        {% for course in courses %}
+            <tr>
+                <td>{{course.name}}</td>
+                <td>{{course.description}}</td>
+                <td>{{course.created_on}}</td>
+                <td><a href="/removecourse/{{course.id}}">remove</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</html>
