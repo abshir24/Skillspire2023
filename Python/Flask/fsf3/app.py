@@ -16,7 +16,6 @@ class Course(db.Model):
 
 @app.route('/')
 def index():
-    # [<Course1>, <Course2>]
     return render_template("index.html", courses = Course.query.all())
 
 @app.route('/addcourse', methods=["POST", "GET"])
