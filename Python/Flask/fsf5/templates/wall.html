@@ -1,0 +1,13 @@
+<h1>Hello {{user.username}}</h1>
+
+<h1>Add post</h1>
+<form action="/addpost" method="POST">
+    <input type="textfield" name="post"><br>
+
+    <input type="Submit" value="Submit">
+</form>
+
+{% for post in all_posts %}
+    <p>Post: {{post.post}}</p>
+    <p>Created On: {{post.created_on}}</p>
+{% endfor %}
