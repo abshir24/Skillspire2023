@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            img{
+                width:500px;
+                height:500px;
+
+            }
+            .imgcontainer{
+                display:inline-block;
+                margin-left:30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <div class="imgcontainer">
+                <a href="/coding-playlist">
+                    <img src= "{% static 'demoapp/images/coding.png' %}" alt="Uh Oh,didn't show!">
+                    <h2>Coding</h2>
+                </a>
+                
+            </div>
+            <div class="imgcontainer">
+                <a href="/earth-playlist">
+                    <img src= "{% static 'demoapp/images/earth.png' %}" alt="Uh Oh,didn't show!">
+                    <h2>Earth</h2>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

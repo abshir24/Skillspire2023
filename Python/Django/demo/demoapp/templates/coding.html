@@ -1,0 +1,20 @@
+<h1>Coding</h1>
+
+<table>
+    <th>
+        <td>No.</td>
+        <td>Track</td>
+        <td>Artist</td>
+        <td>Album</td>
+        <td>Length</td>
+    </th>
+    {% for song in playlist %}
+        <tr>
+            <td>{{song.No}}</td>
+            <td>{{song.Track}}</td>
+            <td>{{song.Artist}}</td>
+            <td>{{song.Album}}</td>
+            <td>{{song.Length}}</td>
+        </tr>
+    {% endfor %}
+</table>
