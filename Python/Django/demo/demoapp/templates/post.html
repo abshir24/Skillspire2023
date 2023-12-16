@@ -1,0 +1,16 @@
+<h1>Post</h1>
+
+<form action="/addpost" method="POST">
+    {% csrf_token %}
+    <label>Post</label><br>
+    <input type="text" name="post"><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<h2>All Posts</h2>
+
+{% for post in posts %}
+    <p>Post: {{post.post}}</p>
+    <p>Timestamp: {{post.created_date}}</p>
+{% endfor %}

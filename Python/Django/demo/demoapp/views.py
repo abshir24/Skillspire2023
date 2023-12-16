@@ -1,7 +1,22 @@
 from django.shortcuts import render, HttpResponse,redirect
-from .models import User
+from .models import User,Post
 
 # Create your views here.
+def addpost(request):
+    if request.method =='POST':
+        form_post = request.POST['post']
+
+        post = Post.objects.create(post = form_post)
+
+    return redirect('/allposts')
+
+def allposts(request):
+    context = {
+        "posts": Post.objects.all() #[<Post>,<Post>,<Post>]
+    }
+
+    return render(request,"post.html",context = context)
+
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']
