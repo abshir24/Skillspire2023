@@ -1,0 +1,30 @@
+<h1>Add Post</h1>
+
+<form action="/addpost" method="POST">
+    {% csrf_token %}
+    <label>Post</label><br>
+    <input type="text" name="post"><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<table>
+    <tr>
+        <th>Post</th>
+        <th>Created At</th>
+        <th>Action</th>
+    </tr>
+
+    {% for post in allposts %}
+        <tr>
+            <td>{{post.post}}</td>
+            <td>{{post.created_date}}</td>
+            <td>
+                <a href="/edit/{{post.id}}">Edit</a>
+                <a href="/delete/{{post.id}}">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+   

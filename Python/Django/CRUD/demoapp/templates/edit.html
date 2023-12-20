@@ -1,0 +1,12 @@
+<h1>Edit Post</h1>
+
+<p>You are editing the following post:</p>
+<p>Post: {{post.post}} Created: {{post.created_date}}</p>
+
+<form action="/editpost/{{post.id}}" method="POST">
+    {% csrf_token %}
+    <label>Edit</label><br>
+    <input type="text" name="post"><br>
+
+    <input type="submit" value="Submit">
+</form>
