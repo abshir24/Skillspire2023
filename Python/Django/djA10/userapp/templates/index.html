@@ -1,0 +1,36 @@
+<h1>Register</h1>
+
+<form action="/register" method="POST">
+    {% csrf_token %}
+    <label>First Name</label><br>
+    <input type="text" name="fname"><br>
+
+    <label>Last Name</label><br>
+    <input type="text" name="lname"><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email"><br>
+
+    <label>Password</label><br>
+    <input type="password" name="password"><br>
+
+    <input type="submit" value = "Submit">
+</form>
+
+<h1>Login</h1>
+
+<form action="/login" method="POST">
+    {% csrf_token %}
+
+    <label>Email</label><br>
+    <input type="email" name="email"><br>
+
+    <label>Password</label><br>
+    <input type="password" name="password"><br>
+
+    <input type="submit" value = "Submit">
+</form>
+
+{% for error in errors %}
+    <h2 style="color:red">{{error}}</h2>
+{% endfor %}

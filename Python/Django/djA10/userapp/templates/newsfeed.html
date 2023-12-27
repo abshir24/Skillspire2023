@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            .post{
+                border: solid black 2px;
+                margin-bottom: 10px;
+                width:300px;
+                height:200px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Hello {{username}}!</h2>
+
+        <h2>Add Blog Post:</h2>
+
+        <form action = '/addpost' method = 'POST'>
+            {%csrf_token%}
+            <label>Name:</label><br>
+            <input type="text" name="name"><br>
+
+            <label>Post:</label><br>
+            <input type="text" name="post"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        {% for post in posts %}
+            <div class="post">
+                <p>User: {{post.name}}</p>
+                <p>Post: {{post.post}}</p>
+            </div>
+        {% endfor %}
+
+        <a href="/logout">Logout</a>
+    </body>
+</html>
