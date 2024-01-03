@@ -1,0 +1,15 @@
+<h1>Fill out info:</h1>
+
+<form action='/userdata' method="POST">
+    {% csrf_token %}
+    <label>Name</label><br>
+    <input type="text" name="name"><br>
+
+    <label>Favorite Food</label><br>
+    <input type="text" name="food"><br>
+
+    <label>Favorite Vacation Destination</label><br>
+    <input type="text" name="vacation"><br>
+
+    <input type="submit" value="Submit">
+</form>
