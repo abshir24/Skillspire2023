@@ -1,0 +1,6 @@
+<h1>Full Name: {{user.full_name}}</h1>
+<h1>Email: {{user.email}}</h1>
+<h1>Created at: {{user.created_at}}</h1>
+
+<a href="{% url 'edit-user' id=user.id %}">Edit</a> |
+<a href="{% url 'delete-user' id=user.id %}">Delete</a>

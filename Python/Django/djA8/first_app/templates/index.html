@@ -1,0 +1,32 @@
+<style>
+    table,tr,td,th{
+        border: solid black 2px
+    }
+</style>
+<h1>Users</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Created At</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for user in allusers %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.full_name}}</td>
+            <td>{{user.email}} </td>
+            <td>{{user.created_at}}</td>
+            <td> 
+                <a href ='/users/show/{{user.id}}'>Show</a>
+                <a href ='/users/edit/{{user.id}}'>Edit</a>
+                <a href ='/users/delete/{{user.id}}'>Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+<a href ='/users/new'>Add new user</a>
